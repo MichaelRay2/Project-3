@@ -96,6 +96,8 @@ def get_ship(long,taken):
 
 def create_ships(taken,boats):
 
+    boat = []
+
 def check_boat(b,start,dirn,taken):
 
 def create_boats(taken,boats):
