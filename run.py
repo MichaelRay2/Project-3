@@ -103,8 +103,26 @@ def create_ships(taken,boats):
         ship,taken = get_ship(boat,taken)
         ships.append(ship)
 
+    return ships,taken
+
 def check_boat(b,start,dirn,taken):
 
+     boat = []
+    if dirn == 1:
+        for i in range(b):
+            boat.append(start - i*10)
+    elif dirn == 2:
+        for i in range(b):
+            boat.append(start + i)
+    elif dirn == 3:
+        for i in range(b):
+            boat.append(start + i*10)
+    elif dirn == 4:
+        for i in range(b):
+            boat.append(start - i)
+    boat = check_ok(boat,taken)           
+    return boat  
+    
 def create_boats(taken,boats):
 
 def show_board_c(taken):
