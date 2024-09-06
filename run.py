@@ -98,6 +98,11 @@ def create_ships(taken,boats):
     #assinging ships to empty list so we can append 
     ships = []
 
+    for boat in boats:
+        #running rhrough get_ship function and passing through boat and taken so we can assign the ship locations
+        ship,taken = get_ship(boat,taken)
+        ships.append(ship)
+
 def check_boat(b,start,dirn,taken):
 
 def create_boats(taken,boats):
