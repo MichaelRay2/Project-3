@@ -391,4 +391,11 @@ for i in range(100):
         score = 100 - (100 - i)
         break
 
+# This score is based on whether the user won and how many shot it took for the user to win.
 print("Your score is " + str(score))
+
+maths_question()
+
+get_user_data()
+
+update_score_sheet()
