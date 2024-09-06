@@ -54,6 +54,8 @@ def intro():
 
 
 def check_ok(boat,taken):
+    #Sort boats to make ascending list
+    boat.sort()
     
 def get_ship(long,taken):
 
