@@ -87,7 +87,7 @@ def get_ship(long,taken):
         #ask user to enter numbers
         print("Enter your ship of length",long)
         for i in range(long):
-            boat_num = input("Enter a number")
+            boat_num = input("Enter a number\n")
             #adding number user picked to ship list
             ship.append(int(boat_num))
             #checking that ship has been placed acceptably
@@ -264,7 +264,7 @@ def get_shot(guesses):
     ok = "n"
     while ok == "n":
         try:
-            shot = input("please enter your guess")
+            shot = input("please enter your guess\n")
             shot = int(shot)
             #make sure shot is within range
             if shot < 0 or shot > 99:
@@ -315,7 +315,7 @@ def maths_question():
 #Getting a name to store alongside user's score
 def get_user_data():
     global username
-    username = input("Enter a username")
+    username = input("Enter a username\n")
 
 #This function will update the scoresheet and pull the highest score in the column along with the corresponding username
 def update_score_sheet():
