@@ -327,3 +327,20 @@ def update_score_sheet():
     #Prining the current high score and the username
     print("The player with that has the best score is " + best_user)
     print("Their highest score is: " + str(highest_number))
+
+#before game
+hit1 = []
+miss1 = []
+comp1 = []
+guesses1 = []  
+missed1 = 0
+tactics1 = []
+taken1 = []
+taken2 = []
+hit2 = []
+miss2 = []
+comp2 = []
+guesses2 = []  
+missed2 = 0
+tactics2 = []
+global score 
