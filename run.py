@@ -113,6 +113,7 @@ def get_user_data():
 #This function will update the scoresheet and pull the highest score in the column along with the corresponding username
 def update_score_sheet():
     values = score_sheet.get_all_values
+    last_row = len(values) + 1
     
 
     print("The player with that has the best score is " + best_user)
