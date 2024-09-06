@@ -65,7 +65,7 @@ def check_ok(boat,taken):
         elif num < 0 or num > 99:
             boat = [-1]
             break
-        elif != 0:
+        elif i != 0:
             if boat[i] != boat[i-1]+1 and boat[i] != boat[i-1]+10:
                 boat = [-1]
                 break
