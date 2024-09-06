@@ -252,14 +252,15 @@ def calc_tactics(shot,tactics,guesses,hit):
     return cand
 
 def get_shot(guesses):
-
     ok = "n"
     while ok == "n":
         try:
             shot = input("please enter your guess")
             shot = int(shot)
+            #make sure shot is within range
             if shot < 0 or shot > 99:
                 print("incorrect number, please try again")
+            #make sure shot not already been done
             elif shot in guesses:
                 print("incorrect number, used before")                
             else:
@@ -271,6 +272,8 @@ def get_shot(guesses):
     return shot
 
 def check_if_empty_2(list_of_lists):
+    return all([not elem for elem in list_of_lists ])
+
 
 #Maths Question to potentially multiply user's score
 def maths_question():
