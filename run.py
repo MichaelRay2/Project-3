@@ -197,6 +197,20 @@ def show_board(hit,miss,comp):
         print(x," ",row)
 
 def check_shot(shot,ships,hit,miss,comp):
+    missed = 0
+    for i in range(len(ships)):      
+        if shot in ships[i]:
+            ships[i].remove(shot)
+            if len(ships[i]) > 0:
+                hit.append(shot)
+                missed = 1
+            else:
+                comp.append(shot)
+                missed = 2                              
+    if missed == 0:
+        miss.append(shot)
+                
+    return ships,hit,miss,comp,missed
 
 def calc_tactics(shot,tactics,guesses,hit):
 
