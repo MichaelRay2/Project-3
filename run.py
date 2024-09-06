@@ -105,6 +105,9 @@ def maths_question():
     final_score = score_mult*score
     print(final_score)
 
+    #Getting a name to store alongside user's score
 def get_user_data():
-
+    global username
+    username = input("Enter a username")
+    
 def update_score_sheet():
