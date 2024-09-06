@@ -77,6 +77,12 @@ def get_ship(long,taken):
     good_ship = True
     while ok:
         ship = []
+        #ask user to enter numbers
+        print("Enter your ship of length",long)
+        for i in range(long):
+            boat_num = input("Enter a number")
+            #adding number user picked to ship list
+            ship.append(int(boat_num))
         
 
 def create_ships(taken,boats):
