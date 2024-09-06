@@ -51,3 +51,34 @@ def intro():
     print("You must enter numbers such that the cells occupied by a single ship are adjacent to each other.")
     print("For the result shown in the grid above you would enter 61|62|63|64|65")
     print("Note: Your ships cannot be diagonal")
+
+
+def check_ok(boat,taken):
+    
+def get_ship(long,taken):
+
+def create_ships(taken,boats):
+
+def check_boat(b,start,dirn,taken):
+
+def create_boats(taken,boats):
+
+def show_board_c(taken):
+
+def get_shot_comp(guesses,tactics):
+
+def show_board(hit,miss,comp):
+
+def check_shot(shot,ships,hit,miss,comp):
+
+def calc_tactics(shot,tactics,guesses,hit):
+
+def get_shot(guesses):
+
+def check_if_empty_2(list_of_lists):
+
+def maths_question():
+
+def get_user_data():
+
+def update_score_sheet():
