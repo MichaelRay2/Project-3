@@ -313,11 +313,11 @@ def get_user_data():
 
 #This function will update the scoresheet and pull the highest score in the column along with the corresponding username
 def update_score_sheet():
-    values = score_sheet.get_all_values
+    values = score_sheet.get_all_values()
     #Defining last row of sheet
     last_row = len(values) + 1
     #New data to be added
-    new_data = [username,score]
+    new_data = [username,score,]
     #Inserting new row for new data
     score_sheet.insert_row(new_data, last_row)
     #Pulling highest number from 2nd column
