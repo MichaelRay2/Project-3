@@ -69,6 +69,8 @@ def check_ok(boat,taken):
             if boat[i] != boat[i-1]+1 and boat[i] != boat[i-1]+10:
                 boat = [-1]
                 break
+        
+        return boat
     
 def get_ship(long,taken):
 
