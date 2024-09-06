@@ -352,3 +352,9 @@ battleships = [5,4,3,3,2,2]
 head()
 
 intro()
+
+#computer creates a board for player 1
+ships1,taken1 = create_boats(taken1,battleships)
+#user creates the board for player 2 - show board
+ships2,taken2 = create_ships(taken2,battleships)
+show_board_c(taken2)
