@@ -95,8 +95,8 @@ def get_ship(long,taken):
             return ship,taken
 
 def create_ships(taken,boats):
-
-    boat = []
+    #assinging ships to empty list so we can append 
+    ships = []
 
 def check_boat(b,start,dirn,taken):
 
