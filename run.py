@@ -118,7 +118,9 @@ def update_score_sheet():
     score_sheet.insert_row(new_data, last_row)
     column_data = score_sheet.col_values(2)
     highest_number = max(column_data)
-    
+    numeric_data = [float(value) for value in column_data if value]
+    max_index = numeric_data.index(max(numeric_data)) + 1
+    best_user = score_sheet.cell(max_index, 1).value
     
 
     print("The player with that has the best score is " + best_user)
