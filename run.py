@@ -344,3 +344,6 @@ guesses2 = []
 missed2 = 0
 tactics2 = []
 global score 
+
+battleships = [5,4,3,3,2,2]
+# game amount of ships
