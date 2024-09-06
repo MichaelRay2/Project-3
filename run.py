@@ -105,9 +105,15 @@ def maths_question():
     final_score = score_mult*score
     print(final_score)
 
-    #Getting a name to store alongside user's score
+#Getting a name to store alongside user's score
 def get_user_data():
     global username
     username = input("Enter a username")
-    
+
+#This function will update the scoresheet and pull the highest score in the column along with the corresponding username
 def update_score_sheet():
+    
+    
+
+    print("The player with that has the best score is " + best_user)
+    print("Their highest score is: " + str(highest_number))
