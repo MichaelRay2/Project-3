@@ -1,4 +1,5 @@
 from random import randrange
+import random
 import time
 
 # 3rd party
@@ -125,6 +126,7 @@ def check_boat(b,start,dirn,taken):
 
 #Function to randomly generate boat positions for computer.
 def create_boats(taken,boats):
+    ships = []
     for b in boats:
         boat = [-1]
         while boat[0] == -1:
@@ -136,6 +138,7 @@ def create_boats(taken,boats):
         ships.append(boat)
         #important that taken is re-assigned so that no boats overlap
         taken = taken + boat
+    return ships,taken
 
 #function to show computer's board
 def show_board_c(taken):
@@ -394,8 +397,9 @@ for i in range(100):
 # This score is based on whether the user won and how many shot it took for the user to win.
 print("Your score is " + str(score))
 
+#score multiplier
 maths_question()
-
+#Getting user info
 get_user_data()
-
+#update google sheet
 update_score_sheet()
