@@ -89,7 +89,7 @@ def get_ship(long,taken):
             if ship[0] != -1:
                 taken = taken + ship
                 break
-                else:
+            else:
                     print("error - please try again")
 
             return ship,taken
