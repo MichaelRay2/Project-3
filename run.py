@@ -2,7 +2,7 @@ from random import randrange
 import time
 
 # 3rd party
-from colorama import fore
+from colorama import Fore
 
 # Bringing in modules needed to link file to google doc
 import gspread
@@ -90,9 +90,9 @@ def get_ship(long,taken):
                 taken = taken + ship
                 break
             else:
-                    print("error - please try again")
+                print("error - please try again")
 
-            return ship,taken
+        return ship,taken
 
 def create_ships(taken,boats):
     #assinging ships to empty list so we can append 
