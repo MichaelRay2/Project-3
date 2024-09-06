@@ -56,6 +56,12 @@ def intro():
 def check_ok(boat,taken):
     #Sort boats to make ascending list
     boat.sort()
+    #For loop to account for reduction in spaces of boat left ifa a space has been taken
+    for i in range(len(boat)):
+        num = boat[i]
+        if num in taken:
+            boat = [-1]
+            break
     
 def get_ship(long,taken):
 
