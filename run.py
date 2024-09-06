@@ -113,15 +113,19 @@ def get_user_data():
 #This function will update the scoresheet and pull the highest score in the column along with the corresponding username
 def update_score_sheet():
     values = score_sheet.get_all_values
+    #Defining last row of sheet
     last_row = len(values) + 1
+    #New data to be added
     new_data = [username,score]
+    #Inserting new row for new data
     score_sheet.insert_row(new_data, last_row)
+    #Pulling highest number from 2nd column
     column_data = score_sheet.col_values(2)
     highest_number = max(column_data)
+    #Pulling corresponding username on same row
     numeric_data = [float(value) for value in column_data if value]
     max_index = numeric_data.index(max(numeric_data)) + 1
     best_user = score_sheet.cell(max_index, 1).value
-    
-
+    #Prining the current high score and the username
     print("The player with that has the best score is " + best_user)
     print("Their highest score is: " + str(highest_number))
