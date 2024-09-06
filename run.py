@@ -92,6 +92,8 @@ def get_ship(long,taken):
                 else:
                     print("error - please try again")
 
+            return ship,taken
+
 def create_ships(taken,boats):
 
 def check_boat(b,start,dirn,taken):
