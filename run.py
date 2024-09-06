@@ -77,7 +77,33 @@ def get_shot(guesses):
 
 def check_if_empty_2(list_of_lists):
 
+#Maths Question to potentially multiply user's score
 def maths_question():
+    global score_mult 
+    print("Now for the chance to multiply your score.")
+    #Generating 2 random numbers
+    num_1 = random.randint(4,12)
+    num_2 = random.randint(4,12)
+    print("What is " + (str(num_1)) + " x "+ (str(num_2) + " ?"))
+    response = input()
+    #Check to see if response is numeric
+    while not response.isnumeric():
+        print("Enter a number")
+        response = input()
+    response_int = int(response)
+    answer = num_1*num_2
+
+    #If statement to determine whether user's answer is correct and score should be multiplied by 2x.
+    if answer == response_int:
+        print("correct, your score is doubled")
+        score_mult = 2
+    else:
+        print("Incorrect, your score stays the same")
+        score_mult = 1
+
+    #Printing the users final score
+    final_score = score_mult*score
+    print(final_score)
 
 def get_user_data():
 
