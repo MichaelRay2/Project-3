@@ -116,6 +116,7 @@ def update_score_sheet():
     last_row = len(values) + 1
     new_data = [username,score]
     score_sheet.insert_row(new_data, last_row)
+    column_data = score_sheet.col_values(2)
     
 
     print("The player with that has the best score is " + best_user)
