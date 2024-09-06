@@ -106,8 +106,8 @@ def create_ships(taken,boats):
     return ships,taken
 
 def check_boat(b,start,dirn,taken):
-
-     boat = []
+    #check that all numbers align
+    boat = []
     if dirn == 1:
         for i in range(b):
             boat.append(start - i*10)
@@ -122,8 +122,20 @@ def check_boat(b,start,dirn,taken):
             boat.append(start - i)
     boat = check_ok(boat,taken)           
     return boat  
-    
+
+#Function to randomly generate boat positions for computer.
 def create_boats(taken,boats):
+    for b in boats:
+        boat = [-1]
+        while boat[0] == -1:
+            #Assigning first position randomly
+            boat_start = randrange(99)
+            #Assigning direction randomly
+            boat_direction = randrange(1,4)
+            boat = check_boat(b,boat_start,boat_direction,taken)
+        ships.append(boat)
+        #important that taken is re-assigned so that no boats overlap
+        taken = taken + boat
 
 def show_board_c(taken):
 
