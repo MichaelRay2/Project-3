@@ -212,7 +212,36 @@ def check_shot(shot,ships,hit,miss,comp):
                 
     return ships,hit,miss,comp,missed
 
+#determining where next shot should be based on whether the previous shot was a hit
 def calc_tactics(shot,tactics,guesses,hit):
+    temp = []
+    if len(tactics) < 1:
+        temp = [shot-1,shot+1,shot-10,shot+10]
+    else:
+        if shot-1 in hit:
+            temp = [shot+1]
+            for num in [2,3,4,5,6,7,8]:
+                if shot-num not in hit:
+                    temp.append(shot-num) 
+                    break 
+        elif shot+1 in hit:
+            temp = [shot-1]
+            for num in [2,3,4,5,6,7,8]:
+                if shot+num not in hit:
+                    temp.append(shot+num) 
+                    break
+        if shot-10 in hit:
+            temp = [shot+10]
+            for num in [20,30,40,50,60,70,80]:
+                if shot-num not in hit:
+                    temp.append(shot-num) 
+                    break 
+        elif shot+10 in hit:
+            temp = [shot-10]
+            for num in [20,30,40,50,60,70,80]:
+                if shot+num not in hit:
+                    temp.append(shot+num) 
+                    break
 
 def get_shot(guesses):
 
