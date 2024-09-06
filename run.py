@@ -137,7 +137,22 @@ def create_boats(taken,boats):
         #important that taken is re-assigned so that no boats overlap
         taken = taken + boat
 
+#function to show computer's board
 def show_board_c(taken):
+    print("            battleships    ")
+    print("     0  1  2  3  4  5  6  7  8  9")
+
+    place = 0
+    for x in range(10):
+        row = ""
+        for y in range(10):
+            ch = " _ "
+            if place in taken:
+                ch = " o "   
+            row = row + ch
+            place = place + 1
+            
+        print(x," ",row)
 
 def get_shot_comp(guesses,tactics):
 
