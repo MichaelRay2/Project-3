@@ -85,15 +85,15 @@ def get_ship(long,taken):
             #adding number user picked to ship list
             ship.append(int(boat_num))
             #checking that ship has been placed acceptably
-            ship = check_ok(ship,taken)
+        ship = check_ok(ship,taken)
             #-1 is the key for a failed placed ship. Re-assign taken to include new ship.
-            if ship[0] != -1:
-                taken = taken + ship
-                break
-            else:
-                print("error - please try again")
+        if ship[0] != -1:
+            taken = taken + ship
+            break
+        else:
+            print("error - please try again")
 
-        return ship,taken
+    return ship,taken
 
 def create_ships(taken,boats):
     #assinging ships to empty list so we can append 
