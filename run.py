@@ -390,3 +390,5 @@ for i in range(100):
         print("end of game - computer wins in " + str(i) +" shots")
         score = 100 - (100 - i)
         break
+
+print("Your score is " + str(score))
