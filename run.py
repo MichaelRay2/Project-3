@@ -372,3 +372,21 @@ for i in range(100):
         print("end of game - winner in " + str(i) +" shots" )
         score = 100 + (100 - i)
         break  
+
+#computer shoots
+  
+    shot2,guesses2 = get_shot_comp(guesses2,tactics2)
+    ships2,hit2,miss2,comp2,missed2 = check_shot(shot2,ships2,hit2,miss2,comp2)
+    show_board(hit2,miss2,comp2)
+    
+    if missed2 == 1:
+        tactics2 = calc_tactics(shot2,tactics2,guesses2,hit2)
+    elif missed2 == 2:
+        tactics2 = []
+    elif len(tactics2) > 0:
+        tactics2.pop(0)
+
+    if check_if_empty_2(ships2):
+        print("end of game - computer wins in " + str(i) +" shots")
+        score = 100 - (100 - i)
+        break
