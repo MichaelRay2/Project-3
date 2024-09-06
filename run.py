@@ -74,7 +74,7 @@ def check_ok(boat,taken):
     
 def get_ship(long,taken):
     #setting initial status of true for loop
-    good_ship = True
+    ok = True
     while ok:
         ship = []
         #ask user to enter numbers
@@ -154,7 +154,27 @@ def show_board_c(taken):
             
         print(x," ",row)
 
+#generates computer's shot, with tactics
 def get_shot_comp(guesses,tactics):
+    # re-assigning var from "TRUE" to n
+    ok = "n"
+    while ok == "n":
+        try:
+            #Checks if tactics are applicable
+            if len(tactics) > 0:
+                shot = tactics[0]
+            else:
+                #Random shot if no tactics are applicable
+                shot = randrange(99)
+            if shot not in guesses:
+                #Ensures shot has not already been done
+                ok = "y"
+                guesses.append(shot)
+                break
+        except:
+            print("incorrect entry - please enter again")
+            
+    return shot,guesses
 
 def show_board(hit,miss,comp):
 
