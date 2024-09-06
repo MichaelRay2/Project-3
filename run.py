@@ -31,3 +31,23 @@ def head():
     print(Fore.BLUE + "  |==||                                       ")
     time.sleep(1)           
     print(Fore.RED + "==========================================================================================")
+
+# Explaining rules of the game
+def intro():
+    print(Fore.WHITE + "Welcome to Battleships!")
+    print("During this game you will play against the computer and you will be asked to distribute 6 different ships around your board.")
+    print("Your board and the Computer's board will look like the following:")
+    print("  0 1 2 3 4 5 6 7 8 9")
+    print("0 - - - - - - - - - -")
+    print("1 - - - - - - - - - -")
+    print("2 - - - - - - - - - -")
+    print("3 - - - - - - - - - -")
+    print("4 - - - - - - - - - -")
+    print("5 - - - - - - - - - -")
+    print("6 - o o o o o - - - -")
+    print("7 - - - - - - - - - -")
+    print("8 - - - - - - - - - -")
+    print("9 - - - - - - - - - -")
+    print("You must enter numbers such that the cells occupied by a single ship are adjacent to each other.")
+    print("For the result shown in the grid above you would enter 61|62|63|64|65")
+    print("Note: Your ships cannot be diagonal")
