@@ -358,3 +358,17 @@ ships1,taken1 = create_boats(taken1,battleships)
 #user creates the board for player 2 - show board
 ships2,taken2 = create_ships(taken2,battleships)
 show_board_c(taken2)
+
+#loop
+for i in range(100):
+
+#player shoots
+    guesses1 = hit1 + miss1 + comp1
+    shot1 = get_shot(guesses1)
+    ships1,hit1,miss1,comp1,missed1 = check_shot(shot1,ships1,hit1,miss1,comp1)
+    show_board(hit1,miss1,comp1)
+#repeat until ships empty
+    if check_if_empty_2(ships1):
+        print("end of game - winner in " + str(i) +" shots" )
+        score = 100 + (100 - i)
+        break  
