@@ -77,7 +77,7 @@ def check_ok(boat,taken):
                 boat = [-1]
                 break
         
-        return boat
+    return boat
     
 def get_ship(long,taken):
     #setting initial status of true for loop
