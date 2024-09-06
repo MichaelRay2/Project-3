@@ -73,6 +73,11 @@ def check_ok(boat,taken):
         return boat
     
 def get_ship(long,taken):
+    #setting initial status of true for loop
+    good_ship = True
+    while ok:
+        ship = []
+        
 
 def create_ships(taken,boats):
 
