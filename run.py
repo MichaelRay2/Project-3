@@ -242,6 +242,14 @@ def calc_tactics(shot,tactics,guesses,hit):
                 if shot+num not in hit:
                     temp.append(shot+num) 
                     break
+    #additional tactics based on processing more shot info
+    cand =[]
+    for i in range(len(temp)):
+        if temp[i] not in guesses and temp[i] < 100 and temp[i] > -1:
+            cand.append(temp[i])
+    random.shuffle(cand)
+    
+    return cand
 
 def get_shot(guesses):
 
